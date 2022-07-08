@@ -1,10 +1,4 @@
 const getFromApi = async (url) => {
-  let headers = new Headers();
-  headers.set(
-    "Authorization",
-    "Basic " +
-      "aryakvn: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".toString("base64")
-  );
   return new Promise((res, rej) => {
     fetch(url)
       .then((res) => res.json())
