@@ -1,15 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" direction="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
+    <title>Aryadev.js</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <h1> Hello, World! </h1>
+    <nav>
+        <img src="./assets/images/profile.jpg" alt="" class="logo">
+
+        <ul>
+            <li><a href="#"> مقالات </a></li>
+            <li><a href="#"> پست ها </a></li>
+        </ul>
+    </nav>
+
+    <div class="tool-bar">
+        <ul>
+            <li><a href="#"> بخش ها </a></li>
+            <li><a href="#"> دسته بندی ها </a></li>
+            <li><a href="#"> درباره من </a></li>
+            <li><a href="#"> تماس </a></li>
+        </ul>
+    </div>
+
+    <div class="content" id="app">
+        <!-- Posts -->
+        <h2>آخرین پست ها</h2>
+        <section class="posts">
+            <a class="post">
+                <img src="http://picsum.photos/720?r=1" alt="">
+                <h1>Post</h1>
+            </a>
+            <a class="post">
+                <img src="http://picsum.photos/720?r=2" alt="">
+                <h1>Post</h1>
+            </a>
+            <a class="post">
+                <img src="http://picsum.photos/720?r=3" alt="">
+                <h1>Post</h1>
+            </a>
+            <a class="post">
+                <img src="http://picsum.photos/720?r=4" alt="">
+                <h1>Post</h1>
+            </a>
+
+        </section>
+
+        <hr>
+        <!-- Articles -->
+        <h2>آخرین مقالات</h2>
+        <section class="articles">
+            <a class="article" v-for="(article, n) in articles" :key="`article-${n}`" :href="article.path">
+                <img src="./assets/images/profile.jpg" alt="">
+                <h1> {{ article.name }} </h1>
+            </a>
+        </section>
+    </div>
+
+    <script src="./assets/scripts/vue.global.js"></script>
+    <script src="./assets/scripts/github.js"></script>
+    <script src="./assets/scripts/app.js" defer></script>
 </body>
 
 </html>

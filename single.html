@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/single.css" />
+    <link rel="stylesheet" href="./assets/css/default.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="./assets/images/profile.jpg" alt="" class="logo" />
+
+        <ul>
+            <li><a href="#">مقالات</a></li>
+            <li><a href="#">پست ها</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>CORS چیست ؟&nbsp;</h1>
+
+        <h1>
+            <img alt="CORS ERROR" src="https://s24.picofile.com/file/8451431726/3845387.jpg" />
+        </h1>
+
+        <p>
+            اگر تا حالا از AJAX استفاده کردین حتما با خطای زیر مواجه شدین :
+        </p>
+
+        <p>
+            <img alt="CORS ERROR" src="https://s25.picofile.com/file/8451431642/pasted_image.jpg" />
+        </p>
+
+        <p>
+            توی این پست میخوایم ببینیم این ارور چرا رخ میده و اصلا CORS چی هست.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+            CORS
+            <strong>چیست ؟</strong>
+        </p>
+
+        <p>
+            CORS
+            <sup>(Cross-origin resource sharing)</sup>
+            یک مکانیزم بر مبنای هدرها
+            <sup>(Header)</sup>
+            ست که برای مرورگر تعیین میکنه که بجز دامنه فعلی از چه دامنه های دیگه ای
+            منابع به اشتراک بگذاره.یعنی این مکانیزم نمیذاره که هکر ها از یک سایت به
+            یک وبسایت دیگه ریکوئست الکی بدن.
+        </p>
+
+        <h2>چرا ؟</h2>
+
+        <p>
+            تصور کنید روی یه وبسایتی چند تا جای تبلیغات داره.&nbsp;حالا یه هکر عزیز
+            میاد و روی یکی از جای این تبلیغ ها، تبلیغ خودشو میذاره.&nbsp;ولی همراه
+            با تبلیغش یک اسکریپت هم بارگذاری میکنه ..&zwnj;.&nbsp;این اسکریپت به محض
+            باز شدن سایت یه درخواست به:
+        </p>
+
+        <pre>
+<code>https://mybank.xyz/delete</code></pre>
+
+        <p>میفرسته.</p>
+
+        <p>
+            اگر قبل از باز کردن این وبسایت توی mybank.xyz لاگین کرده باشین، از
+            اونجایی که session ها هم ارسال میشن، اکانت شما
+            <sup>(توی سایت بانکتون)</sup>
+            پاک میشه !!
+        </p>
+
+        <p>
+            ولی مرورگر شما قبل از فرستادن درخواست با توجه به هدر های CORS میبینه که
+            وبسایتی مثلا مثل زومیت اجازه درخواست فرستادن به مثلا بانک ملت رو نداره و
+            اون درخواست رو نمی فرسته.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <h2><strong>چطوری استفاده کنم ؟</strong></h2>
+
+        <p>&nbsp;</p>
+
+        <p>
+            برای این که فقط از مبدا های مشخص درخواست دریافت کنید، کافیه این هدر رو
+            روی صفحات مورد نظر بفرستید :
+        </p>
+
+        <pre>
+<code>Access-Control-Allow-Origin: http://www.example.com</code>
+</pre>
+
+        <p>&nbsp;</p>
+    </div>
+
+    <script src="./assets/scripts/highlight.min.js"></script>
+    <script defer>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.content > * > img {
+    max-width: 100%;
+}
+
+.content > p {
+    text-align: justify;
+}
+
+.content pre {
+    text-align: left;
+    direction: ltr;
+    font-family: monospace;
+}
